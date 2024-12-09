@@ -78,25 +78,30 @@ export default function DemoMethods() {
             Use Cases
           </p>
         </div>
+        <div className="relative h-auto md:h-[600px] lg:h-[800px] flex flex-wrap justify-center items-center md:block">
+  {[
+    { src: "image 44.svg", className: "top-0 left-10 lg:w-24 lg:h-50" },
+    { src: "pinterest_logo_icon_147250 1.svg", className: "top-10 right-10 lg:w-28 lg:h-28" },
+    { src: "twitter.svg", className: "top-40 left-1/4 lg:w-24 lg:h-24" },
+    { src: "mail.svg", className: "bottom-10 left-12 lg:w-28 lg:h-28" },
+    { src: "image 41.svg", className: "bottom-20 right-10 lg:w-32 lg:h-32" },
+    { src: "reel 1.svg", className: "bottom-5 left-1/3 lg:w-24 lg:h-24" },
+    { src: "image 42.svg", className: "top-20 right-1/3 lg:w-28 lg:h-28" },
+  ].map((icon, index) => (
+    <img
+      key={index}
+      src={`/Images/${icon.src}`}
+      alt="Use Case"
+      className={`absolute w-16 h-16 sm:w-20 sm:h-20 object-cover ${index === 0 ? "" : "mt-2"
+      }
+      md:absolute md:${icon.className}`}
+    />
+  ))}
+</div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-16">
-          {[
-            { src: "image 44.svg" },
-            { src: "pinterest_logo_icon_147250 1.svg" },
-            { src: "twitter.svg" },
-            { src: "mail.svg" },
-            { src: "image 41.svg" },
-            { src: "reel 1.svg" },
-            { src: "image 42.svg" },
-          ].map((icon, index) => (
-            <img
-              key={index}
-              src={`/Images/${icon.src}`}
-              alt="Use Case"
-              className="w-16 h-16 md:w-24 md:h-24 object-cover mx-auto"
-            />
-          ))}
-        </div>
+
+
+
       </div>
 
       {/* Features Section */}

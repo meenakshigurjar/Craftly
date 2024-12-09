@@ -51,22 +51,23 @@ export default function DemoUsers() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 px-4">
+      <div className="animate-marquee">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 px-4">
         {[
           {
-            bgColor: "bg-[#496AF1]",
+            
             img: "/Images/avatar-3.svg",
             text: "If a new tool comes out and it saves you time and costs less than the equivalent value, it's usually an insta buy.",
             name: "Jackson Schaal",
           },
           {
-            bgColor: "bg-[#496AF1]",
+            
             img: "/Images/avatar-1.webp.svg",
             text: "This tool exceeded my expectations and streamlined my entire workflow seamlessly.",
             name: "Jane Doe",
           },
           {
-            bgColor: "bg-[#F3FE00]",
+            
             img: "/Images/avatar-2.svg",
             text: "A must-have tool for anyone looking to improve their productivity and efficiency!",
             name: "John Smith",
@@ -101,6 +102,7 @@ export default function DemoUsers() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
