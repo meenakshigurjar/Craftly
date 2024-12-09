@@ -11,7 +11,7 @@ import DemoAsset from "./components/demo/DemoAsset";
 function App() {
   return (
     <>
-      <div className="px-20">
+      <div className="px-4 sm:px-8 md:px-20">
         <DemoMenubar />
         <DemoHeader />
         <DemoContent />

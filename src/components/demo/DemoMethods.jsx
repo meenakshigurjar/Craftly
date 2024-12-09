@@ -2,22 +2,22 @@ import * as React from "react";
 import union from "/Images/Union.png";
 import Group21 from "/Images/Group 21.png";
 
-export default function DemoMain() {
+export default function DemoMethods() {
   return (
-    <div className="space-y-4 gap-8">
+    <div className="h-fit space-y-4">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[745px] bg-cover bg-center -p-0 -m-0"
+        className="relative w-full h-[120vh] md:h-[80vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${union})` }}
       >
-        <div className="absolute top-[200px] inset-x-0 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-Archivo text-black">
+        <div className="absolute top-[15%] md:top-[25%] inset-x-0 flex flex-col items-center text-center px-4 space-y-4">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-Archivo text-black">
             Various methods to engage
           </h1>
-          <p className="text-lg md:text-xl text-black mt-2.5 font-Archivo">
+          <p className="text-base md:text-lg lg:text-xl text-black font-Archivo">
             Generate images and videos using a range of integrations and plugins
           </p>
-          <div className="flex flex-wrap justify-evenly py-10 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 py-6">
             {[
               { src: "/Images/code 1.svg", label: "API" },
               { src: "/Images/asterisk (1) 1..svg", label: "Zapier" },
@@ -25,108 +25,100 @@ export default function DemoMain() {
               { src: "/Images/google-forms 1.svg", label: "Forms" },
               { src: "/Images/url 1.svg", label: "URL" },
             ].map((icon, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div className="w-[200px] h-[190px] p-12 bg-white border border-black rounded-xl flex flex-col items-center">
-                  <img src={icon.src} alt={icon.label} className="w-24 h-24" />
-                </div>
-                <div className="text-center mt-2">
-                  <h1 className="text-lg font-bold">{icon.label}</h1>
-                </div>
+              <div
+                key={index}
+                className={`flex flex-col items-center bg-white border border-black p-4 rounded-xl 
+                `
+              }
+              >
+                <img
+                  src={icon.src}
+                  alt={icon.label}
+                  className="w-16 h-16 md:w-24 md:h-24"
+                />
+                <h1 className="text-sm md:text-base font-bold mt-2">
+                  {icon.label}
+                </h1>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="flex justify-around py-12 bg-gray-50">
+      {/* Stats Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-8 bg-gray-50 text-center">
         {[
           { value: "100+", description: "Pre-made designs" },
           { value: "2K+", description: "Users automated with us" },
           { value: "500+", description: "Generated images" },
         ].map((stat, index) => (
-          <div key={index} className="text-center">
-            <h1 className="text-4xl font-bold text-black">{stat.value}</h1>
-            <p className="text-lg text-black">{stat.description}</p>
+          <div key={index}>
+            <h1 className="text-2xl md:text-4xl font-bold text-black">
+              {stat.value}
+            </h1>
+            <p className="text-sm md:text-lg text-black">{stat.description}</p>
           </div>
         ))}
       </div>
 
+      {/* Use Cases Section */}
       <div
         className="relative py-12"
         style={{
           backgroundImage: `url(${Group21})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "100vh",
         }}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className="text-4xl font-bold text-blue-500">Craftly</h1>
-          <p className="mt-4 text-3xl font-bold text-black">Use Cases</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-blue-500">
+            Craftly
+          </h1>
+          <p className="mt-4 text-xl md:text-3xl font-bold text-black">
+            Use Cases
+          </p>
         </div>
 
-        <div className="relative h-full w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-16">
           {[
-            { src: "image 44.svg", position: "top-15 left-60" },
-            {
-              src: "pinterest_logo_icon_147250 1.svg",
-              position: "top-10 right-20",
-            },
-            { src: "twitter.svg", position: "top-40 left-10" },
-            { src: "mail.svg", position: "bottom-20 right-24" },
-            { src: "image 41.svg", position: "bottom-24 left-14" },
-            {
-              src: "reel 1.svg",
-              position: "bottom-10 left-1/2 transform -translate-x-1/2",
-            },
-            { src: "image 42.svg", position: "bottom-20 right-20" },
+            { src: "image 44.svg" },
+            { src: "pinterest_logo_icon_147250 1.svg" },
+            { src: "twitter.svg" },
+            { src: "mail.svg" },
+            { src: "image 41.svg" },
+            { src: "reel 1.svg" },
+            { src: "image 42.svg" },
           ].map((icon, index) => (
             <img
               key={index}
               src={`/Images/${icon.src}`}
               alt="Use Case"
-              className={`absolute ${icon.position} w-[100px] h-[100px] object-cover`}
+              className="w-16 h-16 md:w-24 md:h-24 object-cover mx-auto"
             />
           ))}
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-between gap-6 py-12">
-  {[
-    {
-      bgColor: "bg-yellow-300",
-      text: "Generate Images via API/ Zapier",
-    },
-    {
-      bgColor: "bg-blue-500",
-      text: "Watermark Videos via API/Zapier",
-    },
-    {
-      bgColor: "bg-yellow-300",
-      text: "Generate PDFs via API/Zapier",
-    },
-    {
-      bgColor: "bg-blue-500",
-      text: "E-Mail Marketing",
-    },
-    {
-      bgColor: "bg-yellow-300",
-      text: "Social media",
-    },
-    {
-      bgColor: "bg-blue-500",
-      text: "Sales and Outreach",
-    },
-  ].map((feature, index) => (
-    <div
-      key={index}
-      className={`flex items-center justify-center p-4 w-full sm:w-[48%] md:w-[30%] h-[150px] ${feature.bgColor} border-r-2 border-b-2 border-black rounded-xl`}
-    >
-      <h1 className="text-xl text-black text-center">{feature.text}</h1>
-    </div>
-  ))}
-</div>
-
+      {/* Features Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-12">
+        {[
+          { bgColor: "bg-yellow-300", text: "Generate Images via API/ Zapier" },
+          { bgColor: "bg-blue-500", text: "Watermark Videos via API/Zapier" },
+          { bgColor: "bg-yellow-300", text: "Generate PDFs via API/Zapier" },
+          { bgColor: "bg-blue-500", text: "E-Mail Marketing" },
+          { bgColor: "bg-yellow-300", text: "Social media" },
+          { bgColor: "bg-blue-500", text: "Sales and Outreach" },
+        ].map((feature, index) => (
+          <div
+            key={index}
+            className={`flex items-center justify-center p-4 ${feature.bgColor} border-r-2 border-b-2 border-black rounded-xl`}
+          >
+            <h1 className="text-sm md:text-lg text-black text-center">
+              {feature.text}
+            </h1>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

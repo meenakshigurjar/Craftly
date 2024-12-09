@@ -20,8 +20,9 @@ export default function DemoHeader() {
       }}
     >
       <div className="space-y-10 mt-10">
+        {/* Floating Frame Image */}
         <div className="relative">
-          <div className="absolute w-36 h-36 top-20 justify-evenly">
+          <div className="absolute w-20 h-20 sm:w-36 sm:h-36 top-15 sm:top-30">
             <img
               src={Frame}
               alt="Frame"
@@ -29,37 +30,38 @@ export default function DemoHeader() {
             />
           </div>
         </div>
+
+        {/* Main Header Content */}
         <div
           className="flex flex-col justify-center w-full max-w-3xl mx-auto"
           style={{ fontFamily: "Archivo" }}
         >
           {/* First Row */}
-          <div className="flex flex-col md:flex-row items-center text-4xl justify-center mt-10">
+          <div className="flex flex-col md:flex-row items-center text-2xl sm:text-3xl md:text-4xl justify-center mt-10 space-y-4 md:space-y-0">
             <span>Transform Your</span>
-            <div className="w-64 h-16 mx-6">
-  <video
-    className="w-full h-full object-cover rounded-full"
-    autoPlay
-    loop
-    muted
-    src="/Images/Video1.mp4"
-  />
-</div>
-
+            <div className="w-48 h-12 md:w-64 md:h-16 mx-4 md:mx-6">
+              <video
+                className="w-full h-full object-cover rounded-full"
+                autoPlay
+                loop
+                muted
+                src="/Images/Video1.mp4"
+              />
+            </div>
             <span>Business</span>
             <img
               src={Clip}
               alt="clip"
-              className="w-12 h-12 rotate-12 object-cover rounded-lg"
+              className="w-6 h-6 md:w-12 md:h-12 rotate-12 object-cover rounded-lg"
             />
           </div>
 
           {/* Second Row */}
-          <div className="flex flex-col md:flex-row items-center text-4xl justify-center mt-6">
+          <div className="flex flex-col md:flex-row items-center text-2xl sm:text-3xl md:text-4xl justify-center mt-6 space-y-4 md:space-y-0">
             <span>with</span>
-            <div className=" w-64 h-16 mx-4">
+            <div className="w-48 h-12 md:w-64 md:h-16 mx-4">
               <video
-                className=" w-full h-full object-cover rounded-full"
+                className="w-full h-full object-cover rounded-full"
                 autoPlay
                 src="/Images/Video2.mp4"
                 loop
@@ -71,26 +73,17 @@ export default function DemoHeader() {
 
           {/* Quote Section */}
           <div className="relative flex justify-center mt-8">
-            <p className="absolute font-Archivo text-lg md:text-2xl w-full max-w-3xl text-center top-18 px-4">
+            <p className="font-Archivo text-sm sm:text-lg md:text-2xl w-full max-w-3xl text-center px-4">
               "Utilize our API and integrations to automatically create social
-              media visuals,
-              <br /> ecommerce banners, and various other graphics."
+              media visuals, ecommerce banners, and various other graphics."
             </p>
           </div>
         </div>
 
-        <div
-          className="flex justify-center mt-8 relative "
-          style={{
-            backgroundImage: "",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "200px",
-          }}
-        >
+        {/* Get Started Button */}
+        <div className="flex justify-center mt-8 relative">
           <Button
-            className="absolute text-black w-[371px] h-[80px] text-center flex items-center justify-center text-[30px] top-[100px]"
+            className="text-black w-[200px] sm:w-[280px] md:w-[371px] h-[50px] sm:h-[65px] md:h-[80px] text-center flex items-center justify-center text-lg sm:text-xl md:text-[30px]"
             style={{
               fontFamily: "Archivo",
               borderBottom: "4px solid black",
@@ -103,9 +96,11 @@ export default function DemoHeader() {
         </div>
       </div>
 
-      <div className="flex justify-center w-full mt-16 space-x-4 ">
+      {/* Cards Section */}
+      <div className="flex flex-wrap justify-center w-full mt-16 space-x-0 sm:space-x-4 gap-4">
+        {/* Card 1 */}
         <Card
-          className="w-[250px] h-[350px] "
+          className="w-[250px] h-[350px] p-4"
           style={{
             border: "none",
             borderRadius: "40px",
@@ -113,21 +108,21 @@ export default function DemoHeader() {
           }}
         >
           <CardHeader>
-            <div className="flex flex-col space-y-8">
+            <div className="flex flex-col space-y-4">
               <img
                 src={Rectangle22}
                 alt="Rectangle 22"
-                className="w-[200px] h-[200px] object-cover rounded-lg"
+                className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] object-cover rounded-lg mx-auto"
               />
             </div>
             <CardTitle
-              className="w-[200px] h-[30px]"
+              className="text-center mt-4"
               style={{ fontFamily: "Archivo" }}
             >
               Automate
             </CardTitle>
             <CardDescription
-              className="w-[200px] h-[30px]"
+              className="text-center"
               style={{ fontFamily: "Archivo" }}
             >
               Marketing Tasks using No-Code
@@ -135,8 +130,9 @@ export default function DemoHeader() {
           </CardHeader>
         </Card>
 
+        {/* Card 2 */}
         <Card
-          className="w-[250px] h-[350px] bg-black text-white"
+          className="w-[250px] h-[350px] bg-black text-white p-4"
           style={{
             border: "none",
             borderRadius: "40px",
@@ -144,14 +140,14 @@ export default function DemoHeader() {
         >
           <CardHeader>
             <CardDescription
-              className="w-[200px] h-[30px]"
+              className="text-center mb-4"
               style={{ fontFamily: "Archivo" }}
             >
               Create Videos & Images using a REST API
             </CardDescription>
-            <div className="flex flex-col space-y-8">
+            <div className="flex flex-col space-y-4">
               <video
-                className="w-full h-full bg-cover bg-center rounded-[120px]"
+                className="w-[200px] h-[150px] sm:w-full sm:h-full bg-cover bg-center rounded-[120px] mx-auto"
                 autoPlay
                 src="/Images/Video3.mp4"
                 loop
@@ -161,8 +157,9 @@ export default function DemoHeader() {
           </CardHeader>
         </Card>
 
+        {/* Card 3 */}
         <Card
-          className="w-[250px] h-[350px] bg-[#496AF1]"
+          className="w-[250px] h-[350px] bg-[#496AF1] text-white p-4"
           style={{
             border: "none",
             borderRadius: "40px",
@@ -170,20 +167,20 @@ export default function DemoHeader() {
         >
           <CardHeader>
             <CardTitle
-              className="w-[200px] h-[30px]"
+              className="text-center mt-4"
               style={{ fontFamily: "Archivo" }}
             >
               Mass-Produce Through a Spreadsheet
             </CardTitle>
             <CardDescription
-              className="w-[92px] h-[59px] py-12"
+              className="text-center mt-4"
               style={{ fontFamily: "Archivo" }}
             >
               Explore
             </CardDescription>
-            <div className="flex items-end space-y-8">
+            <div className="flex items-end space-y-4">
               <video
-                className="w-[472px] h-[155px] bg-cover bg-center rounded-[120px]"
+                className="w-[200px] h-[150px] sm:w-full sm:h-[155px] bg-cover bg-center rounded-[120px] mx-auto"
                 autoPlay
                 src="/Images/Video4.mp4"
                 loop
