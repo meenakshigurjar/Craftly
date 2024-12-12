@@ -17,9 +17,9 @@ export default function DemoMain() {
     <div className="bg-black mb-[-82px] rounded-t-[200px]">
       {/* Header Section */}
       <div
-        className="px-6 py-12 bg-black text-white rounded-t-[200px] space-y-6"
+        className="px-6 py-12 bg-black text-white rounded-t-[200px] space-y-4"
       >
-        <h1 className="text-center text-3xl md:text-5xl font-bold font-archivo mt-4">
+        <h1 className="text-center text-3xl md:text-5xl font-bold font-archivo mt-4 p-2">
           What Craftly Can Do For You?
         </h1>
         <p className="text-center text-lg md:text-xl font-archivo">
