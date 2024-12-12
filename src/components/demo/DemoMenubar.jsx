@@ -19,11 +19,6 @@ export default function DemoMenubar() {
       {/* Header Section for Small Screens */}
       <div className="flex items-center justify-center w-[148px] space-x-2">
         {/* Logo */}
-        <h1 className="font-[Archivo] text-[24px] md:text-[30px] text-left">
-          CRAFTLY
-        </h1>
-
-        {/* Hamburger Button */}
         <button
           className="md:hidden flex items-center justify-center p-2 rounded-lg border border-gray-300"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -31,6 +26,11 @@ export default function DemoMenubar() {
         >
           ☰ {/* Hamburger Icon */}
         </button>
+
+        {/* Hamburger Button */}
+        <h1 className="font-[Archivo] text-[24px] md:text-[30px] text-left">
+          CRAFTLY
+        </h1>
 
         {/* Sign In Button */}
         <Button
