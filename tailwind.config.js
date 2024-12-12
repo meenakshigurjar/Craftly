@@ -14,6 +14,7 @@ export default {
 				animation: {
 				marquee: 'marquee 10s linear infinite',
 				},
+				
 				fontFamily: {
 					archivo: ['Archivo', 'sans-serif'], // Add the font family
 				},

@@ -7,30 +7,38 @@ export default function DemoAsset() {
     <div>
       {/* Hero Section */}
       <div
-        className="relative w-full h-[130vh] bg-cover bg-center -p-0 -m-0"
-        style={{ backgroundImage: `url(${union})` }}
-      >
-        <div className="absolute top-[150px] inset-x-0 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-black text-[30px] sm:text-[40px] lg:text-[50px] font-Archivo w-full max-w-[90%] text-center">
-            Slow asset production is killing your growth. Unlock your true
-            potential now.
-          </h1>
+  className="relative w-full h-[100vh] bg-cover bg-center"
+  style={{ backgroundImage: `url(${union})` }}
+>
+  {/* Main Content Wrapper */}
+  <div className="absolute top-[200px] inset-x-0 flex flex-col items-center text-center px-4">
+    {/* Heading */}
+    <h1 className="text-black font-Archivo text-center w-full max-w-[90%] 
+      text-[20px] sm:text-[24px] md:text-[30px] lg:text-[50px] leading-tight">
+      Slow asset production is killing your growth. Unlock your true potential now.
+    </h1>
 
-          <div className="absolute w-[90%] sm:w-[500px] h-[118px] top-[450px] sm:top-[500px] sm:left-[10%] lg:left-[20%]">
-            <Button
-              className="text-white w-full h-full text-center flex items-center text-[20px] sm:text-[24px] lg:text-[34px] mx-auto"
-              style={{
-                fontFamily: "Archivo",
-                borderBottom: "4px solid black",
-                borderRadius: "120px",
-                backgroundColor: "#496AF1",
-              }}
-            >
-              Get Started
-            </Button>
-          </div>
-        </div>
-      </div>
+    {/* Button Wrapper */}
+    <div className="absolute w-[90%] sm:w-[300px] md:w-[400px] lg:w-[400px] 
+      h-[60px] sm:h-[70px] md:h-[90px] lg:h-[98px] 
+      top-[200px] sm:top-[150px] lg:top-[300px] flex justify-center">
+      <Button
+        className="text-white flex items-center justify-center w-full h-full 
+          text-[16px] sm:text-[20px] md:text-[24px] lg:text-[34px] mx-auto"
+        style={{
+          fontFamily: "Archivo",
+          borderBottom: "4px solid black",
+          borderRadius: "120px",
+          backgroundColor: "#496AF1",
+        }}
+      >
+        Get Started
+      </Button>
+    </div>
+  </div>
+</div>
+
+
       {/* Footer */}
       <div className="flex flex-col items-center justify-center bg-black p-8 mb-[100px]">
         <div className="flex flex-wrap justify-evenly gap-y-8 gap-x-4 mb-[100px]">

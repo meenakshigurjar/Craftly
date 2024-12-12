@@ -22,14 +22,17 @@ export default function DemoHeader() {
       <div className="space-y-10 mt-10">
         {/* Floating Frame Image */}
         <div className="relative">
-          <div className="absolute w-20 h-20 sm:w-36 sm:h-36 top-15 sm:top-30">
+        <div className="relative">
+          <div className="">
             <img
               src={Frame}
               alt="Frame"
-              className="w-full h-full object-cover rounded-lg"
+              className=" absolute w-20 h-20 sm:w-30 sm:h-30 md:w-35 md:h-35 top-15 sm:top-30 object-cover rounded-lg"
             />
           </div>
         </div>
+</div>
+
 
         {/* Main Header Content */}
         <div
@@ -37,7 +40,7 @@ export default function DemoHeader() {
           style={{ fontFamily: "Archivo" }}
         >
           {/* First Row */}
-          <div className="flex flex-col md:flex-row items-center text-2xl sm:text-3xl md:text-4xl justify-center mt-10 space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row items-center text-2xl sm:text-3xl md:text-4xl justify-center mt-10 space-y-2 md:space-y-0">
             <span>Transform Your</span>
             <div className="w-48 h-12 md:w-64 md:h-16 mx-4 md:mx-6">
               <video

@@ -51,58 +51,63 @@ export default function DemoUsers() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="animate-marquee">
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 px-4">
-        {[
-          {
-            
-            img: "/Images/avatar-3.svg",
-            text: "If a new tool comes out and it saves you time and costs less than the equivalent value, it's usually an insta buy.",
-            name: "Jackson Schaal",
-          },
-          {
-            
-            img: "/Images/avatar-1.webp.svg",
-            text: "This tool exceeded my expectations and streamlined my entire workflow seamlessly.",
-            name: "Jane Doe",
-          },
-          {
-            
-            img: "/Images/avatar-2.svg",
-            text: "A must-have tool for anyone looking to improve their productivity and efficiency!",
-            name: "John Smith",
-          },
-        ].map((testimonial, index) => (
-          <div
-            key={index}
-            className={`flex items-center justify-center ${testimonial.bgColor} rounded-xl`}
-          >
-            <div className="bg-white w-full md:w-[400px] p-4 rounded-xl shadow-md border border-gray-300 flex flex-col items-center text-center space-y-4">
-              <img
-                src={testimonial.img}
-                alt={testimonial.name}
-                className="w-[100px] h-[84px] object-cover"
-              />
-              <p className="text-sm md:text-base text-gray-700 font-Inter">
-                {testimonial.text}
-              </p>
-              <div className="flex justify-center space-x-1">
-                {Array(5)
-                  .fill("/Images/star.png")
-                  .map((src, idx) => (
-                    <img
-                      key={idx}
-                      src={src}
-                      alt="Star"
-                      className="w-4 h-4 md:w-5 md:h-5"
-                    />
-                  ))}
+      <div className="flex animate-marquee mb-12">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 shadow:md mt-10 px-4">
+          {[
+            {
+              img: "/Images/avatar-3.svg",
+              text: "If a new tool comes out and it saves you time and costs less than the equivalent value, it's usually an insta buy.",
+              name: "Jackson Schaal",
+              shadowColor: "blue",
+            },
+            {
+              img: "/Images/avatar-1.webp.svg",
+              text: "This tool exceeded my expectations and streamlined my entire workflow seamlessly.",
+              name: "Jane Doe",
+              shadowColor: "yellow",
+            },
+            {
+              img: "/Images/avatar-2.svg",
+              text: "A must-have tool for anyone looking to improve their productivity and efficiency!",
+              name: "John Smith",
+              shadowColor: "blue",
+            },
+          ].map((testimonial, index) => (
+            <div
+              key={index}
+              className={`flex items-center justify-center ${testimonial.bgColor} rounded-xl`}
+            >
+              <div className="bg-white w-full md:w-[400px] p-3 rounded-xl border flex flex-col items-center text-center shadow-lg space-y-4"
+              style={{
+                boxShadow: ` 10px 10px ${testimonial.shadowColor}`, 
+              }}>
+                <img
+                  src={testimonial.img}
+                  alt={testimonial.name}
+                  className="w-[100px] h-[84px] object-cover"
+                />
+                <p className="text-sm md:text-base text-gray-700 font-Inter">
+                  {testimonial.text}
+                </p>
+                <div className="flex justify-center space-x-1">
+                  {Array(5)
+                    .fill("/Images/star.png")
+                    .map((src, idx) => (
+                      <img
+                        key={idx}
+                        src={src}
+                        alt="Star"
+                        className="w-4 h-4 md:w-5 md:h-5"
+                      />
+                    ))}
+                </div>
+                <h1 className="font-Inter text-sm md:text-lg">
+                  {testimonial.name}
+                </h1>
               </div>
-              <h1 className="font-Inter text-sm md:text-lg">{testimonial.name}</h1>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </div>
   );

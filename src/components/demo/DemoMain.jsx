@@ -19,7 +19,7 @@ export default function DemoMain() {
       <div
         className="px-6 py-12 bg-black text-white rounded-t-[200px] space-y-6"
       >
-        <h1 className="text-center text-3xl md:text-5xl font-bold font-archivo">
+        <h1 className="text-center text-3xl md:text-5xl font-bold font-archivo mt-4">
           What Craftly Can Do For You?
         </h1>
         <p className="text-center text-lg md:text-xl font-archivo">
@@ -33,7 +33,7 @@ export default function DemoMain() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 pb-[26rem]">
         {/* Left Column */}
         <div className="space-y-6">
-          <Card className="p-6 bg-yellow-300 rounded-lg shadow-md">
+          <Card className="p-6 bg-yellow-300 rounded-xl sm:rounded-xl md:rounded-2xl lg:rounded-3xl shadow-md">
             <CardHeader>
               <img
                 src={avatar1}
@@ -49,7 +49,7 @@ export default function DemoMain() {
             </CardHeader>
           </Card>
 
-          <Card className="p-6 bg-white rounded-lg shadow-md">
+          <Card className="p-6 bg-white rounded-xl sm:rounded-xl md:rounded-2xl lg:rounded-3xl shadow-md">
             <CardHeader>
               <img
                 src={avatar2}
@@ -68,40 +68,43 @@ export default function DemoMain() {
 
         {/* Middle Column */}
         <div className="relative w-full h-screen">
-          <Card className="p-0 bg-blue-100 rounded-lg shadow-md w-full h-full">
-            <CardHeader className="relative w-full h-full">
-              <img
-                src={hpOverview}
-                alt="Overview"
-                className="absolute inset-0 w-full h-full rounded-lg object-cover"
-              />
-              <h1 className="mt-4 text-center text-2xl font-bold text-gray-800">
-                Create Content, Faster
-              </h1>
-            </CardHeader>
-          </Card>
-        </div>
+  <Card className="py-4 bg-blue-100 rounded-xl sm:rounded-xl md:rounded-2xl lg:rounded-3xl shadow-md w-full h-full">
+    <CardHeader className="relative w-full h-full">
+      <img
+        src={hpOverview}
+        alt="Overview"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <h1 className="absolute inset-x-0 top-8 text-center text-3xl text-white font-bold text-gray-800">
+        Create Content, Faster
+      </h1>
+    </CardHeader>
+  </Card>
+</div>
+
+
+
 
         {/* Right Column */}
         <div className="space-y-6">
-          <Card className="p-6 bg-yellow-300 rounded-lg shadow-md">
-            <CardHeader>
-              <img
-                src={avatar3}
-                alt="Developers"
-                className="w-full rounded-md object-cover"
-              />
-              <CardTitle className="mt-4 text-xl font-semibold text-gray-900">
-                Developers
-              </CardTitle>
-              <CardDescription className="mt-2 text-gray-700">
-                Add image and video generation capability to apps using REST
-                APIs or official libraries in Ruby, Node, and PHP.
-              </CardDescription>
-            </CardHeader>
-          </Card>
+        <Card className="p-6 bg-yellow-300 rounded-xl sm:rounded-xl md:rounded-2xl lg:rounded-3xl shadow-md">
+  <CardHeader>
+    <img
+      src={avatar3}
+      alt="Developers"
+      className="w-full rounded-md object-cover"
+    />
+    <CardTitle className="mt-4 text-xl font-semibold text-gray-900">
+      Developers
+    </CardTitle>
+    <CardDescription className="mt-2 text-gray-700">
+      Add image and video generation capability to apps using REST APIs or official libraries in Ruby, Node, and PHP.
+    </CardDescription>
+  </CardHeader>
+</Card>
 
-          <Card className="p-6 bg-white rounded-lg shadow-md">
+
+          <Card className="p-6 bg-white rounded-xl sm:rounded-xl md:rounded-2xl lg:rounded-3xl shadow-md">
             <CardHeader>
               <img
                 src={avatar4}

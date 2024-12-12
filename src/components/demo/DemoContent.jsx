@@ -78,7 +78,7 @@ export default function DemoContent() {
             muted
             src="/Images/Video6.mp4"
           />
-          <div className="absolute top-[-20px] w-[150px] h-[100px] sm:w-[180px] sm:h-[120px] md:w-[208px] md:h-[147px] lg:w-[250px] lg:h-[180px]">
+          <div className="absolute top-[-50px] w-[150px] h-[100px] sm:w-[100px] sm:h-[100px] md:w-[200px] md:h-[140px] lg:w-[250px] lg:h-[180px]">
             <img
               src={image27}
               alt="image27"
@@ -117,7 +117,7 @@ export default function DemoContent() {
             <img
               src={image28}
               alt="image28"
-              className="absolute top-[-20px] w-full h-full object-cover rounded-lg"
+              className="absolute top-[7px] w-full h-full object-contain rounded-lg"
             />
           </div>
         </div>
