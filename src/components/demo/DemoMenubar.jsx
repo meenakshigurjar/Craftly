@@ -18,7 +18,7 @@ export default function DemoMenubar() {
     <div className="flex flex-col md:flex-row items-center justify-center p-2">
       {/* Header Section for Small Screens */}
       <div className="flex items-center justify-center w-[148px] space-x-2">
-        {/* Logo */}
+        
         <button
           className="md:hidden flex items-center justify-center p-2 rounded-lg border border-gray-300"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -27,12 +27,12 @@ export default function DemoMenubar() {
           ☰ {/* Hamburger Icon */}
         </button>
 
-        {/* Hamburger Button */}
+        
         <h1 className="font-[Archivo] text-[24px] md:text-[30px] text-left">
           CRAFTLY
         </h1>
 
-        {/* Sign In Button */}
+        {/* SignIn Button */}
         <Button
           className="text-white w-[90px] h-[36px] transition duration-200 hover:bg-blue-600 ml-4 md:hidden"
           style={{
@@ -65,7 +65,7 @@ export default function DemoMenubar() {
 </Menubar>
 
 
-      {/* Sign In Button for Larger Screens */}
+      {/* for Larger Screens */}
       <div className="hidden md:flex mt-6 lg:mt-auto items-center">
         <Button
           className="text-white w-[143px] h-[42px] transition duration-200 hover:bg-blue-600 ml-4"
